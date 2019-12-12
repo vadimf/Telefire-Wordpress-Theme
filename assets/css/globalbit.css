@@ -964,6 +964,7 @@ html[dir=rtl] .page-template.page-template-page-regulatory-approvals .modal-head
 .page-template.page-template-page-regulatory-approvals .modal-header .close {
   float: none;
   margin: 0;
+  outline: none !important;
 }
 .page-template.page-template-page-planning .modal-header .close img,
 .page-template.page-template-page-regulatory-approvals .modal-header .close img {
