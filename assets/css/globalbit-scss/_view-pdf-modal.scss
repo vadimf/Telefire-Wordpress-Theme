@@ -1,0 +1,80 @@
+.page-template.page-template-page-planning,
+.page-template.page-template-page-regulatory-approvals {
+  .modal-backdrop {
+    opacity: 0 !important;
+  }
+
+  .modal.show {
+    z-index: 999999999;
+    background-color: rgba(0, 0, 0, .47);
+    padding-top: 50px;
+  }
+
+  .modal-header {
+    width: 100%;
+    border: none;
+
+    @include rtlVersion {
+      text-align: right;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .modal-title {
+      font-size: 1.5em;
+    }
+
+    .modal-btn-download {
+      @include breakpoint(xs) {
+        display: none;
+      }
+    }
+
+    .close {
+      float: none;
+      margin: 0;
+
+      img {
+        max-width: 18px;
+        margin-inline-end: -10px;
+      }
+    }
+  }
+
+  .modal-btn-download {
+    color: #19191a;
+    font-size: 1.2em;
+
+    img {
+      max-width: 18px;
+      margin-inline-end: 10px;
+    }
+  }
+
+  .modal-body {
+    text-align: center;
+
+    .modal-btn-download {
+      font-size: 1em;
+      margin-top: 15px;
+      display: block;
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .modal-content {
+    border-radius: 20px;
+    box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+    padding: 10px 22px;
+
+    @include breakpoint(xs) {
+      padding: 0 5px 20px;
+    }
+  }
+}

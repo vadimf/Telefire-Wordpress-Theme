@@ -1,0 +1,61 @@
+body .q-ty-block .single-product-qt{
+	text-align: center;
+}
+body .q-ty-block .single-product-qt .quantity{
+	padding-right: 40px;
+	float: none;
+	display: inline-block;
+}
+
+
+@media only screen and (max-width: 520px) {
+	body #ajaxsearchlite1 .probox .proinput input, 
+	body div.asl_w .probox .proinput input{
+		font-size: 18px;
+		padding-right: 20px!important;
+	}
+}
+
+
+@media only screen and (max-width: 520px) {
+	body .additional-cart-notice,
+	body .checkout-page.additional-cart-notice{
+		margin-top: 0;
+		padding-right: 0;
+	}
+	body .woocommerce .cart-collaterals .cart_totals, 
+	body .woocommerce-page .cart-collaterals .cart_totals,
+	body .return-to-shop a.wc-backward{
+		width: 100%;
+	}
+	body p.return-to-shop{
+		padding-bottom: 23px;
+	}
+	body p.cart-empty{
+		line-height: 1;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+	.woocommerce-checkout .col-1,
+	.woocommerce-checkout .col-2{
+		flex: 0 0 100%;
+    	max-width: 100%;
+	}
+}
+
+
+@media only screen and (max-width: 520px) {
+	body .woocommerce-thankyou-order-received{
+		max-width: 100%;
+	}
+	body .woocommerce ul.order_details li{
+		float: none;
+		margin-left: 0;
+		padding-left: 0;
+		margin-bottom: 10px;
+		border-left: 0;
+	}
+}
+

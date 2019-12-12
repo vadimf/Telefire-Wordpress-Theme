@@ -1,0 +1,39 @@
+.custom-tabs-panel {
+  margin-top: 20px;
+  display: flex;
+  align-items: end;
+
+  &__item {
+    font-size: 1.2em;
+    padding: 22px 30px;
+
+    &--active {
+      color: white;
+      font-weight: bold;
+      background-image: linear-gradient(#466bc0, #2d4f9e);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  }
+
+  &__item-label {
+    cursor: pointer;
+  }
+
+  @include breakpoint(xs) {
+    display: block;
+
+    &__item {
+      display: inline-block;
+      background-color: #f2f2f2;
+      border-radius: 20px;
+      padding: 10px 20px;
+      margin-inline-end: 0;
+      margin-block-end: 4px;
+      font-size: 14px;
+
+      &--active {
+      }
+    }
+  }
+}

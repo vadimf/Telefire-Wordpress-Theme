@@ -1,0 +1,110 @@
+/*
+
+Theme name: Telefire
+
+Description: Custom theme on Wordpress
+
+Version: 1.0
+
+Author: dev_alona
+
+
+
+All css files are placed in /assets/css/ folder
+
+*/
+
+
+.product-image-list.woocommerce-placeholder.wp-post-image{
+	    background-size: contain !important;
+}
+
+select.wpcf7-form-control.wpcf7-select {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    border: 1px solid #434d5b;
+    background: #fff;
+    font-size: 24px;
+    color: #000;
+    padding-right: 25px;
+}
+.wrap_user_role_select{
+	padding: 0 25px;
+}
+select.user_role_select{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 26px;
+    border: 1px solid #434d5b;
+    background: #fff;
+    font-size: 24px;
+    color: #000;
+    padding-right: 25px;
+}
+/*.user_role_block{
+	display: none;
+}*/
+
+
+
+
+p.resp-iframe {
+    max-height: 155px !important;
+}
+
+
+.woocommerce .cf7-register .additional-users label{
+	color: #fff;
+	background-color: #cc1419;
+	border-color: #cc1419;
+	font-size: 100%;
+	margin: 0;
+	line-height: 1;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+	overflow: visible;
+	padding: 15px 15px 0;
+	font-weight: 700;
+	border-radius: 3px;
+	right: auto;
+	color: #515151;
+	background-color: #ebe9eb;
+	border: 0;
+	display: inline-block;
+	background-image: none;
+	box-shadow: none;
+	text-shadow: none;
+	background: #cb0f16;
+	background: -moz-linear-gradient(top, #cb0f16 0%, #d22624 50%, #d93d32 100%);
+	background: -webkit-linear-gradient(top, #cb0f16 0%,#d22624 50%,#d93d32 100%);
+	background: linear-gradient(to bottom, #cb0f16 0%,#d22624 50%,#d93d32 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb0f16', endColorstr='#d93d32',GradientType=0 );
+	color: #fff;
+	margin-bottom: 0;
+	line-height: 12px;
+}
+
+
+.woocommerce .cf7-register .additional-users input[type=checkbox] {
+	height: inherit;
+	width: inherit;
+	padding: 0;
+	border: 0;
+	margin-left: 8px;
+	margin-right: 6px;
+	line-height: 30px;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+.item.id15 {
+    display: none;
+}
+

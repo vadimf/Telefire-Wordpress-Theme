@@ -1,0 +1,106 @@
+.pdf-files {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 60px;
+  grid-row-gap: 40px;
+
+  &__item {
+    position: relative;
+  }
+
+  @include breakpoint(xs) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 200%;
+
+    @include breakpoint(xs) {
+      font-size: 1em;
+
+      line-height: 140%;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__image-wrapper {
+
+  }
+
+  &__image {
+    border: 3px solid #797979;
+    border-radius: 20px;
+    width: 370px;
+    height: 175px;
+    object-fit: cover;
+    box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(xs) {
+      height: 110px;
+      width: 100%;
+    }
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px 0;
+
+    @include breakpoint(xs) {
+      justify-content: flex-end;
+      padding: 5px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    &--view {
+      @include breakpoint(xs) {
+        position: absolute;
+        top: 30px;
+        left: 0;
+
+        @include rtlVersion {
+          left: auto;
+          right: 0;
+        }
+
+        .pdf-files__btn-label {
+          display: none;
+        }
+
+        .pdf-files__btn-icon {
+          height: auto;
+          width: 26px;
+          max-width: initial;
+          max-height: initial;
+          margin: 10px;
+        }
+      }
+    }
+  }
+
+  &__btn-icon {
+    max-height: 18px;
+    max-width: 18px;
+    width: auto;
+    height: auto;
+    margin-inline-end: 10px;
+  }
+
+  &__btn-label {
+    color: #19191a;
+    font-size: 1.2em;
+
+    @include breakpoint(xs) {
+      font-size: .9em;
+    }
+  }
+}

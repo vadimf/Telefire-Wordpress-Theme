@@ -1,0 +1,28 @@
+@import "mixins";
+
+.calculator-page {
+  @include breakpoint(xs) {
+    .blog_slider {
+      display: none;
+    }
+  }
+
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  &__iframe {
+    padding-top: initial !important;
+
+    iframe {
+      position: unset !important;
+      margin-bottom: 0 !important;
+    }
+
+    @include breakpoint(xs) {
+      &.resp-iframe {
+        display: block !important;
+      }
+    }
+  }
+}

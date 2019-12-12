@@ -1,0 +1,45 @@
+@import "mixins";
+
+.page-template-page-regulatory-approvals {
+  @include breakpoint(xs) {
+    overflow-x: unset;
+  }
+}
+
+.regulatory-approvals {
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  .page__subtitle {
+    font-weight: bold;
+    margin-top: 40px;
+
+    @include breakpoint(xs) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.regulatory-approvals-page {
+  background-color: white;
+  margin-top: -20px;
+  padding-top: 20px;
+
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  @include breakpoint(xs) {
+    margin-top: initial;
+    padding-bottom: 8px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .page__title {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,462 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    font-family: 'Heebo', sans-serif;
+}
+
+.search-form {
+    float: right;
+    position: absolute;
+    right: 0px;
+    left: auto!important;
+    top: 5px;
+}
+.search-submit{
+	right: 3px;
+	left: auto;
+}
+.search-field{
+	padding-right: 0;
+	padding-left: 7px;
+}
+form.wpcf7-form {
+    direction: rtl;
+}
+
+/* Header */
+.site_logo {
+    float: left;
+    margin-right: 35px;
+    margin-left: 0;
+}
+
+#main-menu ul {
+	float: left;
+    clear: right;
+}
+
+#main-menu ul  > li{
+	float: left;
+	padding-right: 35px;
+}
+
+/*#main-menu ul > li.has-sub{
+	padding-right: 50px;
+}*/
+
+#main-menu > ul > li.has-sub > a:before {
+	content: '';
+    position: absolute;
+    top: 28px;
+    right: -15px;
+    left: auto;
+    border: 5px solid transparent;
+    border-top: 5px solid #000000;
+    float: right;
+}
+#main-menu > ul > li.has-sub:hover > a:before{
+	left: auto;
+	right: -15px;
+}
+
+.pagenav {text-align: left;}
+
+
+
+
+#main-menu ul li > ul {
+	margin-left: -20px;
+}
+
+
+#main-menu ul li.has-sub:hover > ul, #main-menu ul li.has-sub:hover > div {
+
+    border-left: 1px solid #c8ccd1;
+    border-bottom: 1px solid #c8ccd1;
+}
+
+#main-menu ul li > ul li {
+    
+    width: 100%;
+    text-align: left;
+
+}
+
+ul.tools-menu {
+	float: right;
+	margin-right: 135px;
+	margin-left: 0;
+
+}
+
+ul.tools-menu  > li{
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+ul.tools-menu  li::before {
+ 	content: "";
+    display: block;
+    position: relative;
+    z-index: 1;
+    right: -16px;
+    left: auto;
+    top: 20px;
+    bottom: 0;
+    border: 1px solid;
+    border-width: 0 1px 0 0;
+    height: 9px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.quick-news .all-news {
+
+    margin-left: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+
+    text-align: right;
+
+}
+
+.all-news a {
+
+
+    margin-right: 10px;
+}
+
+
+
+
+/* Slider */
+
+#carouselFront.home-slider .slider-text, #carouselFront2.home-slider .slider-text {
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer-logo-section{
+    float: left;    
+}
+
+
+.nav-footer-menu-section ul > li{
+	float: left;
+}
+
+
+
+
+/* Contact page */
+.contact-content{
+	text-align: left;
+    padding-right: 60px;
+}
+.contact-content input[type='text'] {
+    text-align: left;
+}
+
+
+.contact-content .col-md-4, .contact-content .col-md-6, .contact-content .col-md-12 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+span.wpcf7-list-item {
+    margin: 0 0 0 0;
+    margin-left: -6px;
+    line-height: 52px;
+        font-size: 18px;
+    color: #000000;
+}
+
+
+.wpcf7-acceptance input {
+    float: left;
+    margin-right: 25px;
+    margin-top: 21px;
+}
+
+
+
+
+
+.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%!important;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    float: left;
+    text-align: left;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+    
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+.breadcrumbs span a{
+    margin-right: 25px;
+}
+
+
+/*Contact form*/
+.contact-content input[type='text'], .contact-content input[type='email'], .contact-content input[type='tel']{
+    padding-left: 15px;
+    text-align: left;
+}
+
+.contact-content textarea {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+
+/* WC */
+
+
+.telefire-auth-form .head-form h2{
+    text-align: left;
+        font-size: 46px;
+    font-weight: 500;
+    padding-left: 35px;
+    line-height: 67px;
+}
+
+.woocommerce-account form .form-row input.input-text {    
+    padding-left: 25px;
+}
+
+.woocommerce-form__label-for-checkbox {
+    line-height: 54px;
+    font-size: 24px;
+    padding-left: 15px;
+}
+
+.woocommerce-LostPassword {
+    float: right;
+    text-align: right;
+    display: block;
+    /* width: calc(100% - 244px); */
+    font-size: 24px;
+    line-height: 50px;
+    padding-right: 105px;
+}
+
+.woocommerce-LostPassword a{
+    color: #19191a;
+}
+
+.woocommerce-LostPassword a:hover{
+    color: #d8142c;
+}
+
+.woocommerce-account-page .woocommerce .col-md-6{
+	float: left;
+}
+
+/*Messages my-account*/
+.waiting-approve-messages{
+	margin-bottom: 60px;
+}
+.waiting-approve-messages p{
+	text-align: left;
+    padding: 30px 35px 30px;
+}
+.note_registration {
+    text-align: left;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    text-align: left;
+}
+.woocommerce-product-search input {
+    padding: 0 40px 0 70px;
+}
+.woocommerce-product-search button {
+    right: 0;
+}
+.registrant_info .account_info {
+    padding-right: 15px;
+}
+
+
+@media only screen and (max-width: 1360px) {
+    .contact-content {
+        padding-right: 40px;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .woocommerce-LostPassword {
+        float: none;
+        text-align: left;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .contact-content {
+        padding-right: 15px;
+        margin-bottom: 60px;
+    }
+    .contact-content .col-md-4, .contact-content .col-md-6, .contact-content .col-md-12 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .col-md-4 {
+        -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    span.wpcf7-list-item {
+        margin-left: 0px;
+    }
+    span.wpcf7-list-item {
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .wpcf7-acceptance input {
+        margin-top: 10px;
+    }
+    .woocommerce-account form .form-row {
+        padding: 0px 0px;
+        margin: 0 0 6px;
+    }
+    .woocommerce-account-page .woocommerce .col-md-6, .note_registration {
+        padding: 0;
+    }
+    .woocommerce-account form .form-row input.input-text {
+        height: 54px;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .woocommerce-product-search input {
+        padding: 0 70px 0 25px;
+    }
+}
+
+.woocommerce-Address{
+    text-align: left;
+}
+
+address {
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+
+
+body.home .video img{
+	-moz-transform: rotate(180deg); 
+    -ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg); 
+    -o-transform: rotate(180deg); 
+    transform: rotate(180deg);
+}
+body .product_buttons{
+	float: left;
+}
+body .product_buttons a{
+	margin-left: 0;
+	margin-right: 20px;
+}
+body .functions-title{
+	text-align: left;
+}
+body .header-product-banner .product-desc{
+	text-align: left;
+}
+body .header-product-banner .product-desc p{
+    padding-left: 0;
+    padding-right: 95px;
+}
+body.single-products .breadcrumbs_blog{
+	text-align: left!important;
+}
+
+@media only screen and (max-width: 1080px){
+	#header{
+		text-align: right;
+	}
+}
+
+.custom-container.companies-search,
+.container-fluide.video-bg {
+    display: none;
+}
+#carouselFront {
+    height: 1170px;
+}
+
+.main-content h1 {
+    text-align: left;
+    line-height: 85px !important;
+    direction: ltr;
+}
+
+p{direction: ltr;}
+
+.sidebar ul {
+    margin: 0;
+}
+
+span.heshow{display: none;}
+
+.product-main-content,
+.features-product .products_lobby_item .course_item_text {
+    text-align: left;}
+
+
+.wpml-ls-menu-item .wpml-ls-native {
+    margin-right: 0;
+    margin-left: .3em;
+}
+h2.ntktitle {
+    display: none;
+}
+.need-know-content {
+    display: none;
+}
+.section-need-know {
+    min-height: 470px;}
+
+.product-main-content h3{
+    font-size: 22px;
+}
+
+
+@media only screen and (max-width: 992px){
+    .features-product ul {
+        margin-right: 0;
+        margin-left: 25px;
+    }
+}

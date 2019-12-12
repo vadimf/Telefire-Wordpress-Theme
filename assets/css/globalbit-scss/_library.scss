@@ -1,0 +1,191 @@
+@import "mixins";
+
+.page-template-page-library {
+  @include breakpoint(xs) {
+    overflow-x: unset;
+  }
+}
+
+.library {
+}
+
+.library-page {
+  background-color: white;
+  margin-top: -20px;
+  padding-top: 20px;
+
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  @include breakpoint(xs) {
+    margin-top: initial;
+    padding-bottom: 8px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .page__title {
+      margin-top: 0;
+    }
+  }
+}
+
+.library-content {
+  padding: 40px 0;
+
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  .page__subtitle {
+    font-weight: bold;
+  }
+
+  @include breakpoint(xs) {
+    padding: 10px 0;
+  }
+}
+
+.faq {
+
+  @include breakpoint(xs) {
+    .page__subtitle {
+      margin-bottom: 30px;
+    }
+  }
+
+  .faq-list {
+    &__item {
+      margin-bottom: 20px;
+      padding-inline-start: 50px;
+
+      @include breakpoint(xs) {
+        padding-inline-start: 40px;
+      }
+
+      &--active {
+        .faq-list__content {
+          display: block;
+        }
+
+        .faq-list__title {
+          font-weight: 500;
+
+          &::before {
+            background-image: url(/wp-content/themes/telefire/assets/images/globalbit/faq-arrow-opened-icon.png);
+            background-size: 40px 40px;
+
+            @include breakpoint(xs) {
+              background-size: 30px 30px;
+            }
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1.3em;
+      cursor: pointer;
+      position: relative;
+      line-height: 200%;
+
+      &::before {
+        content: "";
+        display: block;
+
+        position: absolute;
+        top: 0;
+
+        width: 40px;
+        height: 40px;
+        right: -50px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(/wp-content/themes/telefire/assets/images/globalbit/faq-arrow-closed-icon.png);
+        background-size: 10px 14px;
+
+        @include breakpoint(xs) {
+          right: -40px;
+        }
+      }
+
+      @include breakpoint(xs) {
+        font-size: 14px;
+        line-height: 280%;
+
+        &::before {
+
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+      background-color: white;
+      border-radius: 20px;
+      font-size: 0.9em;
+      line-height: 200%;
+      padding: 20px 30px;
+
+      @include breakpoint(xs) {
+        padding: 20px;
+        margin-inline-start: -40px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.videos {
+  @include rtlVersion {
+    text-align: right;
+  }
+
+  .video-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    margin-top: 50px;
+
+    &__item {
+      .video-wrapper {
+        border-radius: 20px;
+        box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: black;
+      }
+    }
+
+    &__item-title {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: 500;
+      line-height: 140%;
+    }
+
+    @include breakpoint(xs) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 20px;
+      margin-top: 20px;
+
+      &__item {
+        .video-wrapper {
+          display: block !important;
+        }
+      }
+
+      &__item-title {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.page-template-page-app-faq {
+}

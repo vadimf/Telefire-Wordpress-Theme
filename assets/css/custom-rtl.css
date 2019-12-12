@@ -1,0 +1,361 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    font-family: 'Heebo', sans-serif;
+}
+
+form.wpcf7-form {
+    direction: rtl;
+}
+
+/* Header */
+.site_logo {
+    float: right;
+    /*padding-top: 20px;*/
+    margin-left: 35px;
+}
+
+
+#main-menu ul {
+	float: right;
+}
+
+#main-menu ul  > li{
+	float: right;
+	padding-left: 35px;
+}
+
+/*#main-menu ul > li.has-sub{
+	padding-left: 50px;
+}*/
+
+
+
+
+#main-menu > ul > li.has-sub > a:before {
+	content: '';
+    position: absolute;
+    top: 28px;
+    left: -15px;
+    border: 5px solid transparent;
+    border-top: 5px solid #000000;
+    float: left;
+}
+
+.pagenav {text-align: right;}
+
+
+
+
+#main-menu ul li > ul {
+	margin-right: -20px;
+}
+
+
+#main-menu ul li.has-sub:hover > ul, #main-menu ul li.has-sub:hover > div {
+
+    border-right: 1px solid #c8ccd1;
+    border-bottom: 1px solid #c8ccd1;
+}
+
+#main-menu ul li > ul li {
+    
+    width: 100%;
+    text-align: right;
+
+}
+
+ul.tools-menu {
+	float: left;
+	margin-left: 135px;
+
+}
+
+ul.tools-menu  > li{
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+ul.tools-menu  li::before {
+ content: "";
+    display: block;
+    position: relative;
+    z-index: 1;
+    left: -16px;
+    top: 20px;
+    bottom: 0;
+    border: 1px solid;
+    border-width: 0 0 0 1px;
+    height: 9px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.quick-news .all-news {
+
+    margin-right: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+
+    text-align: left;
+
+}
+
+.all-news a {
+
+
+    margin-left: 10px;
+}
+
+
+
+
+/* Slider */
+
+#carouselFront.home-slider .slider-text, #carouselFront2.home-slider .slider-text {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer-logo-section{
+    float: right;    
+}
+
+
+.nav-footer-menu-section ul > li{
+	float: right;
+}
+
+
+
+
+/* Contact page */
+.contact-content{
+	text-align: right;
+    padding-left: 60px;
+}
+.contact-content input[type='text'] {
+    text-align: right;
+}
+
+
+.contact-content .col-md-4, .contact-content .col-md-6, .contact-content .col-md-12 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+span.wpcf7-list-item {
+    margin: 0 0 0 0;
+    margin-right: -6px;
+    line-height: 52px;
+        font-size: 18px;
+    color: #000000;
+}
+
+
+.wpcf7-acceptance input {
+    float: right;
+    margin-left: 25px;
+    margin-top: 21px;
+}
+
+
+
+
+
+.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%!important;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    float: right;
+    text-align: right;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+    
+    text-align: right;
+    padding-right: 15px;
+}
+
+
+.breadcrumbs span a{
+    margin-left: 25px;
+}
+
+
+/*Contact form*/
+.contact-content input[type='text'], .contact-content input[type='email'], .contact-content input[type='tel']{
+    padding-right: 15px;
+    text-align: right;
+}
+
+.contact-content textarea {
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+
+/* WC */
+
+
+.telefire-auth-form .head-form h2{
+    text-align: right;
+    font-size: 46px;
+    font-weight: 500;
+    padding-right: 35px;
+    line-height: 67px;
+}
+
+.woocommerce-account form .form-row input.input-text {    
+    padding-right: 25px;
+}
+
+.woocommerce-form__label-for-checkbox {
+    line-height: 54px;
+    font-size: 24px;
+    /*padding-right: 15px;*/
+    display: inline-block;
+}
+
+.woocommerce-LostPassword {
+    /*float: left;
+    text-align: left;*/
+    display: block;
+    /* width: calc(100% - 244px); */
+    font-size: 24px;
+    line-height: 50px;
+    /*padding-right: 105px;*/
+
+    width: 100%;
+}
+
+.woocommerce-LostPassword a{
+    /*color: #19191a;*/
+}
+
+.woocommerce-LostPassword a:hover{
+    color: #d8142c;
+}
+
+.woocommerce-account-page .woocommerce .col-md-6{
+	float: right;
+}
+
+/*Messages my-account*/
+.waiting-approve-messages{
+	margin-bottom: 60px;
+}
+.waiting-approve-messages p{
+	text-align: right;
+    padding: 30px 35px 10px;
+    font-size: 24px;
+}
+.note_registration {
+    text-align: right;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    text-align: right;
+}
+.woocommerce-product-search input {
+    padding: 0 40px 0 70px;
+}
+.woocommerce-product-search button {
+    left: 0;
+}
+.registrant_info .account_info {
+    padding-left: 15px;
+}
+
+
+@media only screen and (max-width: 1360px) {
+    .contact-content {
+        padding-left: 40px;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    .woocommerce-LostPassword {
+        float: none;
+        text-align: right;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .contact-content {
+        padding-left: 15px;
+        margin-bottom: 60px;
+    }
+    .contact-content .col-md-4, .contact-content .col-md-6, .contact-content .col-md-12 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .col-md-4 {
+        -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    span.wpcf7-list-item {
+        margin-right: 0px;
+    }
+    span.wpcf7-list-item {
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .wpcf7-acceptance input {
+        margin-top: 10px;
+    }
+    .woocommerce-account form .form-row {
+        padding: 0px 0px;
+        margin: 0 0 6px;
+    }
+    .woocommerce-account-page .woocommerce .col-md-6, .note_registration {
+        padding: 0;
+    }
+    .woocommerce-account form .form-row input.input-text {
+        height: 54px;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .woocommerce-product-search input {
+        padding: 0 25px 0 70px;
+    }
+}
+
+.woocommerce-Address{
+    text-align: right;
+}
+
+address {
+    margin: 0 0 20px;
+    text-align: right;
+}
+
+span.enshow{display: none;}

@@ -1,0 +1,16 @@
+.wuev-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%!important;
+    background: #888;
+}
+.wuev-iconwrong {
+    background-color: #dc3232;
+}
+.wuev-iconright {
+    background-color: #7ad03a;
+}
+.align-right-section textarea {
+	text-align: right;
+}

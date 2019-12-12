@@ -1,0 +1,85 @@
+@import "mixins";
+
+body {
+  font-size: 16px !important;
+  line-height: 20px !important;
+  background-color: #f2f2f2 !important;
+}
+
+.blog_slider {
+  &--bright {
+    .heading {
+      color: #203c90 !important;
+    }
+
+    .home-slider .slider-text {
+      @include breakpoint(xs) {
+        top: 10px !important;
+      }
+
+      .subtitle h2 {
+        color: #151515;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        font-weight: 400;
+        margin-bottom: 50px;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.page {
+  &__title {
+    font-size: 3em;
+    font-weight: bold;
+    color: #1f3c90;
+    margin: 20px 0 10px;
+
+    @include breakpoint(xs) {
+      font-size: 1.6em;
+      line-height: 120%;
+    }
+  }
+
+  &__description {
+    color: #1f3c90;
+    font-size: 1.3em;
+    line-height: 120%;
+    font-weight: 300;
+    margin-bottom: 50px;
+
+    ul {
+      list-style: unset;
+      margin-inline-start: 35px;
+
+      @include breakpoint(xs) {
+        margin-inline-start: 20px;
+      }
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    color: #19191a;
+    font-size: 1.8em;
+    font-weight: 400;
+    border-bottom: 4px solid #d9e0e8;
+    line-height: 200%;
+
+    &--upperline {
+      border-bottom: none;
+      border-top: 4px solid #d9e0e8;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 1.2em;
+      line-height: 2em;
+    }
+  }
+}
+
