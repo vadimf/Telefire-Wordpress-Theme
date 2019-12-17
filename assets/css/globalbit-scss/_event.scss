@@ -1,0 +1,261 @@
+@import "mixins";
+
+.event {
+  @include rtlVersion {
+    text-align: right;
+  }
+}
+
+.event-details {
+  background-color: white;
+  padding: 5px 0;
+
+  &__date {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date-icon {
+
+  }
+
+  &__date-icon-image {
+
+  }
+
+  &__date-day {
+    &:after {
+      content: ',';
+      display: inline;
+      margin-inline-end: 3px;
+    }
+  }
+
+  &__date-time {
+
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+
+  &__location-icon {
+  }
+
+  &__location-icon-image {
+
+  }
+
+  &__location-label {
+    &--unknown {
+      color: #9c9b9b;
+    }
+  }
+
+  &__date,
+  &__location {
+    margin: 10px 0;
+
+    &-icon {
+      width: 29px;
+      text-align: center;
+      margin-inline-end: 10px;
+    }
+  }
+}
+
+.event-content {
+  margin: 25px 0;
+  line-height: 150%;
+
+  h3 {
+    font-size: 1.2em;
+    line-height: 100%;
+    font-weight: bold;
+  }
+}
+
+.additional-events {
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 12px 21.4px 2.6px rgba(34, 118, 146, 0.1);
+  padding: 20px 35px 0;
+
+  &__heading {
+    font-size: 1.3em;
+    line-height: 100%;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: #151515;
+    margin: 0 -35px;
+    display: block;
+    background: url(/wp-content/themes/telefire/assets/images/globalbit/calendar-color-icon.png) no-repeat calc(100% - 35px) 6px;
+    border-bottom: 1px solid #d9e0e8;
+    padding: 10px 40px;
+    padding-inline-start: 75px;
+    position: relative;
+
+    &:hover {
+      background: #203c90 url(/wp-content/themes/telefire/assets/images/globalbit/calendar-white-icon.png) no-repeat calc(100% - 35px) 6px;
+      color: white;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      border-top: 10px solid transparent;
+      border-right: 13px solid white;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border: 0;
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:hover &__date {
+    font-weight: bold;
+  }
+
+  &__date-day {
+    &:after {
+      margin-inline-end: 3px;
+      content: ',';
+      display: inline;
+    }
+  }
+
+  &__date-time {
+
+  }
+
+  &__location {
+    font-size: 0.75em;
+
+    &--unknown {
+      color: #9c9b9b;
+    }
+  }
+
+  &__item:hover &__location--unknown {
+    color: inherit;
+  }
+}
+
+.event-form {
+  border-radius: 15px;
+  box-shadow: 0 12px 21px 2px rgba(34, 118, 146, 0.1);
+  background-color: white;
+  position: relative;
+
+  @include breakpoint(xs) {
+    margin-bottom: 40px;
+  }
+
+  &__heading {
+    color: #233e91;
+    font-size: 2.2em;
+    line-height: 130%;
+    font-weight: bold;
+  }
+
+  &__content {
+    padding: 25px 35px;
+
+    &--unsent {
+      .col-xs-6 {
+        flex: 0 0 50%;
+        max-width: calc(50% - 30px);
+        margin: 0 15px;
+      }
+
+      .col-xs-12 {
+        margin: 0 15px;
+      }
+
+      @include breakpoint(xs) {
+        .row {
+          margin-left: -6px;
+          margin-right: -6px;
+        }
+
+        .col-xs-6 {
+          max-width: calc(50% - 12px);
+          margin: 0 6px;
+        }
+
+        .col-xs-12 {
+          margin: 0 6px;
+        }
+      }
+    }
+
+    &--sent {
+      display: none;
+      border-radius: 15px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: white;
+
+      .event-form__heading {
+        font-weight: normal;
+        margin-bottom: 2em;
+      }
+
+      p {
+        font-size: 1.5em;
+        line-height: 190%;
+        max-width: 500px;
+        font-weight: 500;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .registration-disclaimers {
+      list-style: unset;
+      margin: 30px 17px;
+
+      @include breakpoint(xs) {
+        margin: 10px 17px;
+      }
+
+      li {
+        color: #626060;
+        font-size: .75em;
+      }
+    }
+  }
+
+  &--sent {
+    .event-form__content--sent {
+      display: block;
+    }
+  }
+}

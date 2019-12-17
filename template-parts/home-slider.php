@@ -39,6 +39,13 @@ if ( isset($fields['slide']) && is_array($fields['slide']) ):
           <h1 class="heading" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="800" data-aos-duration="800" style="color:<?php echo $field['title_color'] ?>;"><?php echo $field['title'] ?></h1>
           <div class="subtitle subheading" data-aos="fade" data-aos-easing="ease-in" data-aos-delay="1200" data-aos-duration="800">
             <?php if (!empty($field['subtitle'])): ?><h2><?php echo $field['subtitle'] ?></h2><?php endif; ?>
+            <?php if (! empty($field['terms']) && count($field['terms']) > 0): ?>
+                <div class="terms-list">
+                    <?php foreach ( $field['terms'] as $term ): ?>
+                    <div class="terms-list__item"><?php echo $term->name ?></div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             <?php if (!empty($field['button_text'])): ?><a class="learn-more" href="<?php echo $field['button_link']['url']; ?>" <?php if (!empty($field['button_link']['target'])) echo 'target="'. $field['button_link']['target'] .'"'; ?>><?php echo $field['button_text'] ?></a><?php endif; ?>
           </div>
         </div>

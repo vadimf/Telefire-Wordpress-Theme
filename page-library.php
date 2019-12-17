@@ -14,7 +14,7 @@ get_header();
 
             <div class="custom-tabs-panel">
                 <?php
-                $categories = $terms = get_terms(array(
+                $categories = get_terms(array(
                     'taxonomy' => 'library_category',
                     'hide_empty' => true,
                 ));

@@ -55,6 +55,53 @@
     }
   }
 
+  &__checkbox {
+    input {
+      display: none;
+    }
+
+    span.wpcf7-list-item {
+      line-height: inherit;
+      margin: 0;
+      font-size: 1em;
+    }
+
+    .wpcf7-list-item-label {
+      position: relative;
+      padding-inline-start: 30px;
+      display: block;
+
+      &:before {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 14.5px;
+        border: solid 4px #c7d2d6;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        cursor: pointer;
+      }
+
+      &:after {
+        display: none;
+        position: absolute;
+        background: url(/wp-content/themes/telefire/assets/images/globalbit/checkbox-check-mark.png);
+        width: 23px;
+        height: 17px;
+        top: 50%;
+        transform: translateY(calc(-50% - 1px));
+        right: -3px;
+        background-size: contain;
+      }
+    }
+
+    input:checked ~ .wpcf7-list-item-label:after {
+      display: block;
+    }
+  }
+
   &--error {
     .form-field__input {
       border-color: #d3233a;

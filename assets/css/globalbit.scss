@@ -1,3 +1,6 @@
+// My IDE automatically compiles this file without using CLI.
+// I would suggest you to find some plugin that does the same.
+
 @import "globalbit-scss/common";
 @import "globalbit-scss/pdf-files";
 @import "globalbit-scss/tabs-panel";
@@ -9,3 +12,5 @@
 @import "globalbit-scss/library";
 @import "globalbit-scss/regulatory-approvals";
 @import "globalbit-scss/view-pdf-modal";
+@import "globalbit-scss/events";
+@import "globalbit-scss/event";

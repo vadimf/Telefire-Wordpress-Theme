@@ -1,3 +1,5 @@
+@import "mixins";
+
 .custom-tabs-panel {
   margin-top: 20px;
   display: flex;
@@ -33,6 +35,31 @@
       font-size: 14px;
 
       &--active {
+      }
+    }
+  }
+
+  &--multiselect {
+    margin: 0;
+
+    .custom-tabs-panel {
+      &__item {
+        background-color: #eaedee;
+        font-size: 1em;
+        padding: 10px 20px;
+        border-radius: 20px;
+        margin-inline-end: 3px;
+
+        @include breakpoint(xs) {
+          font-size: 0.8em;
+          padding: 8px 15px;
+          border-radius: 20px;
+          margin-inline-end: 0;
+        }
+
+        &--active {
+          font-weight: inherit;
+        }
       }
     }
   }

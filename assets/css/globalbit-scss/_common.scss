@@ -83,3 +83,24 @@ body {
   }
 }
 
+.slider-text {
+  .subtitle.subheading {
+    .terms-list {
+      &__item {
+        display: inline-block;
+        background-color: white;
+        color: black;
+        font-size: 1em;
+        padding: 8px 12px;
+        border-radius: 20px;
+        margin-inline-end: 5px;
+
+        &:before {
+          content: '#';
+          display: inline;
+          margin-inline-end: 3px;
+        }
+      }
+    }
+  }
+}

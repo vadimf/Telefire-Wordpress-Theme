@@ -611,40 +611,4 @@ function custom_wpcf7_validate($result, $tag) {
 }
 add_filter('wpcf7_validate_email*', 'custom_wpcf7_validate', 10, 2);
 
-wp_enqueue_style ('globalbit', get_template_directory_uri().'/assets/css/globalbit.css');
-
-function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
-    $my_attr = 'page-name';
-
-    if ( isset( $atts[$my_attr] ) ) {
-        $out[$my_attr] = $atts[$my_attr];
-    }
-
-    return $out;
-}
-add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
-
-function get_post_query_by_slug( $slug, $post_type = "post" ) {
-    return new WP_Query(
-        array(
-            'name'   => $slug,
-            'post_type'   => $post_type,
-            'numberposts' => 1,
-        ) );
-}
-
-add_filter('upload_mimes', 'my_myme_types', 1, 1);
-function my_myme_types($mime_types) {
-    $revitFileExtensions = [
-        'rvt',
-        'rfa',
-        'rte',
-        'rft'
-    ];
-
-    foreach ($revitFileExtensions as $fileExtension) {
-        $mime_types[$fileExtension] = 'application/octet-stream';
-    }
-
-    return $mime_types;
-}
+include_once get_template_directory() . "/functions-globalbit.php";

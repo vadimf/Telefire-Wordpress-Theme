@@ -37,6 +37,7 @@ $sidebar_group = get_field('sidebar', 'option');
         adjustIframeHeight();
 
         iframeBody.find('button,a,img').click(adjustIframeHeight);
+        iframeBody.on('click', 'button,a,img', adjustIframeHeight);
     });
     
     function adjustIframeHeight() {
@@ -46,17 +47,26 @@ $sidebar_group = get_field('sidebar', 'option');
     window.addEventListener("message", receiveMessage, false);
 
     function receiveMessage(event) {
-        if (event.data === 'results_displayed') {
-            adjustIframeHeight();
-
-            const resultsHeader = iframeBody.find('.results-header').first()[0];
-            const resultsHeaderOffsetTop = (resultsHeader && resultsHeader.offsetTop) || 0;
-            const mainHeader = jQuery('.main_header').first()[0];
-
-            bodyElement.animate({
-                scrollTop: calculatorWrapper.offsetTop + resultsHeaderOffsetTop - mainHeader.clientHeight
-            }, 300);
+        switch (event.data) {
+            case 'results_displayed':
+                resultsDisplayed();
+                break;
+            case 'resize_window':
+                adjustIframeHeight();
+                break;
         }
+    }
+
+    function resultsDisplayed() {
+        adjustIframeHeight();
+
+        const resultsHeader = iframeBody.find('.results-header').first()[0];
+        const resultsHeaderOffsetTop = (resultsHeader && resultsHeader.offsetTop) || 0;
+        const mainHeader = jQuery('.main_header').first()[0];
+
+        bodyElement.animate({
+            scrollTop: calculatorWrapper.offsetTop + resultsHeaderOffsetTop - mainHeader.clientHeight
+        }, 300);
     }
 </script>
 
