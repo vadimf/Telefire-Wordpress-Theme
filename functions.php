@@ -511,6 +511,7 @@ function role_consultant_and_other_close_shop() {
             $user_allcaps = (array) $user->allcaps;
             if(in_array('consultant', $user_roles) || in_array('other', $user_roles)){
                 if($user_allcaps['close_access_to_the_shop'] && (is_woocommerce() || is_cart() || is_checkout() || is_account_page()) ){
+
                     wp_redirect(get_home_url());
                     exit;
                 }
@@ -518,19 +519,26 @@ function role_consultant_and_other_close_shop() {
         }
     }
 }
-add_action('template_redirect', 'role_consultant_and_other_close_shop');
+add_action('template_redirect', 'role_consultant_and_other_close_shop', 8);
 
 
 /* Redirect to home if page custom field "for_auo" = true */
 function custom_access_to_the_page() {
     if(!is_user_logged_in() && function_exists('get_field')){
         if($for_auo = get_field('for_auo')){
-            wp_redirect(get_home_url());
+            $url = get_home_url();
+
+            if(function_exists('wc_get_page_permalink')){
+                if($permalink = get_permalink(get_the_ID())){ $url = $permalink; }
+                $url = wc_get_page_permalink('myaccount').'?return='.$url;
+            }
+
+            wp_redirect($url);
             exit;
         }
     }
 }
-add_action('template_redirect', 'custom_access_to_the_page');
+add_action('template_redirect', 'custom_access_to_the_page', 7);
 
 
 /* Register a woocommerce user with a specific role */
