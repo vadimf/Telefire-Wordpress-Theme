@@ -19,7 +19,7 @@ if (isset($fields['slide']) && isset($fields['slide'][0])) {
 get_header();
 
 $currentEventFields = get_fields();
-$contactFormId = $currentEventFields['contact_form'];
+$contactFormId = $fields['contact_form'];
 
 ?>
 
@@ -37,8 +37,9 @@ $contactFormId = $currentEventFields['contact_form'];
                          alt="תאריך האירוע" class="event-details__date-icon-image"/>
                 </div>
                 <div class="event-details__date-day"><?php echo $currentEventFields['event_date']; ?></div>
-                <div class="event-details__date-time"><?php echo $currentEventFields['event_from']; ?>
-                    -<?php echo $currentEventFields['event_to']; ?></div>
+                <div class="event-details__date-time">
+                    <?php echo $currentEventFields['event_from']; ?>-<?php echo $currentEventFields['event_to']; ?>
+                </div>
             </div>
 
             <div class="event-details__location">
@@ -48,7 +49,7 @@ $contactFormId = $currentEventFields['contact_form'];
                 </div>
 
                 <div class="event-details__location-label<?php if (!$currentEventFields['location']): ?> event-details__location-label--unknown<?php endif; ?>">
-                    <?php echo $$currentEventFields['location'] ? $currentEventFields['location'] : 'מיקום יעודכן בקרוב'; ?>
+                    <?php echo $currentEventFields['location'] ? $currentEventFields['location'] : 'מיקום יעודכן בקרוב'; ?>
                 </div>
             </div>
 
@@ -126,8 +127,7 @@ $contactFormId = $currentEventFields['contact_form'];
                                 <a href="<?php echo get_the_permalink() ?>" class="additional-events__item">
                                     <div class="additional-events__date">
                                         <div class="additional-events__date-day"><?php echo $eventFields['event_date']; ?></div>
-                                        <div class="additional-events__date-time"><?php echo $eventFields['event_from']; ?>
-                                            -<?php echo $eventFields['event_to']; ?></div>
+                                        <div class="additional-events__date-time"><?php echo $eventFields['event_from']; ?>-<?php echo $eventFields['event_to']; ?></div>
                                     </div>
 
                                     <div class="additional-events__location<?php if (!$eventFields['location']): ?> additional-events__location--unknown<?php endif; ?>">

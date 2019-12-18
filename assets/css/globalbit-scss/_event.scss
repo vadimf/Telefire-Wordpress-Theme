@@ -4,6 +4,10 @@
   @include rtlVersion {
     text-align: right;
   }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .event-details {

@@ -1095,6 +1095,9 @@ html[dir=rtl] .page-template.page-template-page-regulatory-approvals .modal-head
 html[dir=rtl] .events {
   text-align: right;
 }
+.events a:hover {
+  text-decoration: none;
+}
 .events__tabs {
   background-color: white;
   padding: 20px 0;
@@ -1179,6 +1182,9 @@ html[dir=rtl] .events {
 
 html[dir=rtl] .event {
   text-align: right;
+}
+.event a:hover {
+  text-decoration: none;
 }
 
 .event-details {

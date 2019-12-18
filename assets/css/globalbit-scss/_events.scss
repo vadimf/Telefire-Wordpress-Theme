@@ -11,6 +11,10 @@
     text-align: right;
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
   &__tabs {
     background-color: white;
     padding: 20px 0;
