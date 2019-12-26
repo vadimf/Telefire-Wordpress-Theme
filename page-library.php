@@ -119,13 +119,13 @@ get_header();
 
     jQuery('.faq-list__item').on('click', '.faq-list__title', function () {
         const element = jQuery(this).parent();
-
-        if (element.hasClass(activeFaqItemClassName)) {
-            return;
-        }
+        const wasOpen = element.hasClass(activeFaqItemClassName);
 
         jQuery('.faq-list__item.' + activeFaqItemClassName).removeClass(activeFaqItemClassName);
-        element.addClass(activeFaqItemClassName);
+
+        if (! wasOpen) {
+            element.addClass(activeFaqItemClassName);
+        }
     });
 
     jQuery('.custom-tabs-panel__item').on('click', '.custom-tabs-panel__item-label', function () {
@@ -152,7 +152,8 @@ get_header();
         } else {
             faqList.show();
             faqItemsUnderCategory.show();
-            jQuery(faqItemsUnderCategory[0]).find('.faq-list__title').click()
+            // Uncomment to open the first question by defailt
+            // jQuery(faqItemsUnderCategory[0]).find('.faq-list__title').click();
         }
 
         if (!videoItemsUnderCategory.length) {

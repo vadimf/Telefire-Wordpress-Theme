@@ -54,17 +54,19 @@ Template name: Application FAQ
     jQuery('.faq-list__item').on('click', '.faq-list__title', function () {
         const element = jQuery(this).parent();
 
-        if (element.hasClass(activeFaqItemClassName)) {
-            return;
-        }
+        const wasOpen = element.hasClass(activeFaqItemClassName);
 
         jQuery('.faq-list__item.' + activeFaqItemClassName).removeClass(activeFaqItemClassName);
-        element.addClass(activeFaqItemClassName);
+
+        if (! wasOpen) {
+            element.addClass(activeFaqItemClassName);
+        }
     });
 
-    jQuery(document).ready(() => {
-        jQuery('.faq-list__title')[0].click();
-    });
+    // Uncomment to open the first question by default
+    // jQuery(document).ready(() => {
+    //     jQuery('.faq-list__title')[0].click();
+    // });
 </script>
 
 <?php wp_footer(); ?>
